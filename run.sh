@@ -13,4 +13,18 @@ sls invoke -f talita --log
 sls invoke local -f talita --log
 
 #configurar dashboard
-sls
+sls login
+
+# clone your repo first
+git clone git@github.com:<seu repositorio>
+cd <projeto clonado>
+
+# install and login
+npm install serverless --global
+serverless login
+
+# edit your code & re-deploy
+serverless deploy
+
+# OR edit your code & commit changes
+git add . && git commit -m "Changes" && git push
